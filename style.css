@@ -1,0 +1,96 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: #3f3f3f;
+}
+.title span {
+    color: #FFBA20;
+}
+.photo__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.photo__container img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    cursor: pointer;
+}
+.lp-modal {
+    width: 100%;
+    height: 100%;
+    background: #0b0b0bc8;
+    position: fixed;
+    top: 0;
+}
+.lp-modal__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 15px;
+}
+.lp-modal__content img {
+    max-width: 600px;
+}
+.lp-modal__counter {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.lp-modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    line-height: 0.85;
+    user-select: none;
+}
+.lp-modal__close:hover, .lp-modal__prev:hover, .lp-modal__next:hover {
+    color: #fff;
+}
+.lp-modal__prev, .lp-modal__next {
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    position: absolute;
+    font-size: 38px;
+    font-weight: bold;
+    top: calc(50% - 38px);
+    user-select: none;
+    outline: none;
+}
+.lp-modal__prev {
+    left: 15px;
+    transform: rotate(180deg);
+}
+.lp-modal__next {
+    right: 15px;
+}
+@media only screen and (max-width: 600px) {
+.photo__container {
+    padding: 0 10px;
+}
+.photo__container img, .lp-modal__content img {
+    width: 100%;
+}
+.lp-modal__prev, .lp-modal__next {
+    top: calc(50% - 0px);
+}
+}
